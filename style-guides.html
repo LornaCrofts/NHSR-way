@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NHSR-way - Community Handbook</title>
+<title>NHSR-way - Style Guides</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./style-guides.html" rel="prev">
+<link href="./community-handbook.html" rel="next">
+<link href="./code-of-conduct.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -73,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./community-handbook.html">Community Handbook</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./style-guides.html">Style Guides</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -115,13 +149,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./style-guides.html" class="sidebar-item-text sidebar-link">
+  <a href="./style-guides.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Style Guides</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./community-handbook.html" class="sidebar-item-text sidebar-link active">
+  <a href="./community-handbook.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Community Handbook</span></a>
   </div>
 </li>
@@ -141,34 +175,31 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#social-media" id="toc-social-media" class="nav-link active" data-scroll-target="#social-media">Social Media</a>
+  <li><a href="#style-guide-for-text" id="toc-style-guide-for-text" class="nav-link active" data-scroll-target="#style-guide-for-text">Style Guide for text</a>
   <ul class="collapse">
-  <li><a href="#nhs-r-slack" id="toc-nhs-r-slack" class="nav-link" data-scroll-target="#nhs-r-slack">NHS-R Slack</a>
+  <li><a href="#write-each-sentence-in-a-new-line-line-breaks" id="toc-write-each-sentence-in-a-new-line-line-breaks" class="nav-link" data-scroll-target="#write-each-sentence-in-a-new-line-line-breaks">Write each sentence in a new line (line breaks)</a></li>
+  <li><a href="#opinions-are-welcome-but" id="toc-opinions-are-welcome-but" class="nav-link" data-scroll-target="#opinions-are-welcome-but">Opinions are welcome, but …</a></li>
+  <li><a href="#avoid-latin-abbreviation" id="toc-avoid-latin-abbreviation" class="nav-link" data-scroll-target="#avoid-latin-abbreviation">Avoid Latin Abbreviation</a></li>
+  <li><a href="#explain-acronyms" id="toc-explain-acronyms" class="nav-link" data-scroll-target="#explain-acronyms">Explain acronyms</a></li>
+  <li><a href="#use-capitals-wisely" id="toc-use-capitals-wisely" class="nav-link" data-scroll-target="#use-capitals-wisely">Use capitals wisely</a></li>
+  <li><a href="#external-links" id="toc-external-links" class="nav-link" data-scroll-target="#external-links">External links</a></li>
+  <li><a href="#chunks-with-code-or-special-text" id="toc-chunks-with-code-or-special-text" class="nav-link" data-scroll-target="#chunks-with-code-or-special-text">Chunks with code or special text</a></li>
+  </ul></li>
+  <li><a href="#style-guide-for-code" id="toc-style-guide-for-code" class="nav-link" data-scroll-target="#style-guide-for-code">Style Guide for code</a>
   <ul class="collapse">
-  <li><a href="#accessing-the-slack" id="toc-accessing-the-slack" class="nav-link" data-scroll-target="#accessing-the-slack">Accessing the Slack</a></li>
-  <li><a href="#deletion-of-accounts-on-slack" id="toc-deletion-of-accounts-on-slack" class="nav-link" data-scroll-target="#deletion-of-accounts-on-slack">Deletion of accounts on Slack</a></li>
-  <li><a href="#slack-security" id="toc-slack-security" class="nav-link" data-scroll-target="#slack-security">Slack security</a></li>
+  <li><a href="#licenceslicenses" id="toc-licenceslicenses" class="nav-link" data-scroll-target="#licenceslicenses">Licences/licenses</a></li>
+  <li><a href="#language" id="toc-language" class="nav-link" data-scroll-target="#language">Language</a></li>
+  <li><a href="#licences-to-use" id="toc-licences-to-use" class="nav-link" data-scroll-target="#licences-to-use">Licences to use</a></li>
   </ul></li>
-  <li><a href="#weekly-office-hours" id="toc-weekly-office-hours" class="nav-link" data-scroll-target="#weekly-office-hours">Weekly office hours</a></li>
-  <li><a href="#twitter" id="toc-twitter" class="nav-link" data-scroll-target="#twitter">Twitter</a></li>
-  <li><a href="#fosstodon-server-on-mastodon" id="toc-fosstodon-server-on-mastodon" class="nav-link" data-scroll-target="#fosstodon-server-on-mastodon">Fosstodon server on Mastodon</a></li>
-  <li><a href="#website" id="toc-website" class="nav-link" data-scroll-target="#website">Website</a></li>
-  <li><a href="#mailing-list" id="toc-mailing-list" class="nav-link" data-scroll-target="#mailing-list">Mailing list</a></li>
-  </ul></li>
-  <li><a href="#video-recording" id="toc-video-recording" class="nav-link" data-scroll-target="#video-recording">Video Recording</a>
-  <ul class="collapse">
-  <li><a href="#youtube" id="toc-youtube" class="nav-link" data-scroll-target="#youtube">YouTube</a></li>
-  </ul></li>
-  <li><a href="#blogs" id="toc-blogs" class="nav-link" data-scroll-target="#blogs">Blogs</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/nhs-r-community/NHSR-way/edit/main/community-handbook.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/nhs-r-community/NHSR-way/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/nhs-r-community/NHSR-way/edit/main/style-guides.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/nhs-r-community/NHSR-way/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Community Handbook</h1>
+<h1 class="title">Style Guides</h1>
 </div>
 
 
@@ -183,81 +214,108 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="social-media" class="level1">
-<h1>Social Media</h1>
-<section id="nhs-r-slack" class="level2">
-<h2 class="anchored" data-anchor-id="nhs-r-slack">NHS-R Slack</h2>
-<p><a href="https://nhsrcommunity.slack.com/">https://nhsrcommunity.slack.com/</a></p>
-<p>The NHS-R Community use the free version of Slack to facilitate conversations between members. Many people join the Slack group and enjoy reading the conversations without ever joining in and that’s ok as this is the best place to find out what’s happening with the community and a lot can be learned from others’ conversations. Because this is a free account we don’t have a history of posts but they would be available if we moved to a paid account.</p>
-<section id="accessing-the-slack" class="level3">
-<h3 class="anchored" data-anchor-id="accessing-the-slack">Accessing the Slack</h3>
-<p>Some organisations’ emails have been added to the white list but because there are so many public sector organisations it may be that you require an individual link to join. Please contact the central email <a href="nhs.rcommunity@nhs.net">nhs.rcommunity@nhs.net</a> for the link. Links that are shared are only available for several days.</p>
-<p>It’s best to use an organisational email for the group, but not necessary, and you are also able to change the email once you’ve joined.</p>
+<section id="style-guide-for-text" class="level1">
+<h1>Style Guide for text</h1>
+<p>To ensure that text like books, websites and blogs can be read easily by everyone, including screen readers and non-native English speakers, we have compiled a set of guidelines to keep a consistent style.</p>
+<p>As recommended in the <a href="https://the-turing-way.netlify.app/community-handbook/style.html#"><em>The Turing Way</em></a> we follow the <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk">GOV.UK guidance</a> to improve accessibility.</p>
+<section id="write-each-sentence-in-a-new-line-line-breaks" class="level2">
+<h2 class="anchored" data-anchor-id="write-each-sentence-in-a-new-line-line-breaks">Write each sentence in a new line (line breaks)</h2>
+<p>Please write all sentences in the markdown file on separate lines. Having each sentence on a new line will make no difference to how the text is displayed, there will still be paragraphs, but it will mean that any pull requests will be easier to check; the changes will be on a single line instead of somewhere in a paragraph. Consider the example below.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Today you are you, that is truer than true. There is no one alive who is youer than you. - Dr Seuss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A pull request on this correcting it to have a ‘.’ after Dr would show as a change to the whole paragraph. Contrast this with the next example which will be displayed online in the exact same way, but would see a change to a single line.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Today you are you, that is truer than true.</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>There is no one alive who is youer than you.</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Dr Seuss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="deletion-of-accounts-on-slack" class="level3">
-<h3 class="anchored" data-anchor-id="deletion-of-accounts-on-slack">Deletion of accounts on Slack</h3>
-<p>Unfortunately with the free account we are unable to change email addresses which has affected some people when they move to a new organisation and require a password reset or use the Slack system of emailing a joining link. However, we can delete any old account to avoid confusion to others on the Slack so they will only tag or direct message the active account.</p>
-<p>Other than this situation, we would only ever delete an account due to <a href="code-of-conduct.html"><span>Chapter&nbsp;2</span></a> issues.</p>
+<section id="opinions-are-welcome-but" class="level2">
+<h2 class="anchored" data-anchor-id="opinions-are-welcome-but">Opinions are welcome, but …</h2>
+<p><em>The NHS-R Community Way</em> book is intended to be only <em>lightly</em> opinionated. Whilst more opinionated content is allowed, such content should be clearly marked. The best way to do this is by displaying it in a quote box. This can be done by either prefixing every line with the greater than symbol <code>&gt;</code>. Note that the formatting will be retained, so we can split each sentence to a new line as recommended before.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; I will not eat them in a house,</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; i will not eat them with a mouse,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; i will not eat them in a box i will not eat them with a fox,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; i will not eat them here of there i will not eat them anywhere,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; I do not like green eggs and ham i do not like them sam i am</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Quarto also allows for <a href="https://quarto.org/docs/authoring/callouts.html">call out boxes</a> for further and specific emphasis including notes, warnings, important, tips and caution.</p>
 </section>
-<section id="slack-security" class="level3">
-<h3 class="anchored" data-anchor-id="slack-security">Slack security</h3>
-<p>Administrators on the Slack can see email addresses and we can bulk email, however, we do not and have not used emails to contact people in bulk. Emails are not visible to others on the Slack workspace but people can Direct Message (DM) and those messages are not visible to administrators.</p>
-<p>In line with good security principles we strongly suggest using two factor authentication for the Slack group.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You will need this for each Slack workspace that you have joined.</p>
-</div>
-</div>
+<section id="avoid-latin-abbreviation" class="level2">
+<h2 class="anchored" data-anchor-id="avoid-latin-abbreviation">Avoid Latin Abbreviation</h2>
+<p>Please do not use Latin abbreviations. See the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style">Gov.uk recommendations</a> for details.</p>
+<p>Some of these abbreviations are:</p>
+<ul>
+<li>exempli gratia (for example)</li>
+<li>et-cetera (so on) and</li>
+<li>id est (that is)</li>
+</ul>
+<p>These examples are not written out in their shortened form as the book can be set to fail to publish with Latin abbreviations through GitHub to enforce this style.</p>
+<p>Instead of the first abbreviation in the table for <em>exempli gratia</em>, which can sometimes read aloud as ‘egg’ by screen reading software, please use ‘for example’ or ‘such as’ or ‘like’ or ‘including’ - whichever works best in the specific context.</p>
+<p>Instead of the second abbreviation in the table for <em>et-cetera</em> to indicate open ended list, please start the list with words like ‘for example’ or ‘such as’ or ‘like’ or ‘including’.</p>
+<p>Instead of third abbreviation in the table for <em>id est</em> that is often used to clarify a sentence, try (re)writing sentences to avoid the need to use it. If that is not possible, use an alternative such as ‘meaning’ or ‘that is’.</p>
+</section>
+<section id="explain-acronyms" class="level2">
+<h2 class="anchored" data-anchor-id="explain-acronyms">Explain acronyms</h2>
+<p>The NHS and many other public sector organisations often rely on acronyms to shorten long texts and names like</p>
+<blockquote class="blockquote">
+<p>NHS Midland and Lancashire Commissioning Support Unit</p>
+</blockquote>
+<p>becomes MLCSU.</p>
+<p>Not everyone will be familiar with these acronyms, even if they work in the same sector like healthcare. It’s fair to continue to use <code>NHS</code> as we rarely say National Health Service but do consider your audience as not everyone is familiar with the NHS and what it does (and doesn’t do).</p>
+<p>For technical language, also consider explaining the acronym, at least once at the beginning of the text. This can be in the form:</p>
+<blockquote class="blockquote">
+<p>Continuous Integration (CI)</p>
+</blockquote>
+<p>so that whenever CI is referenced later its full form is in the text.</p>
+</section>
+<section id="use-capitals-wisely" class="level2">
+<h2 class="anchored" data-anchor-id="use-capitals-wisely">Use capitals wisely</h2>
+<p>Screen readers will read capitals as if they are acronyms which works for things like NHS and MLCSU. Because a screen reader read each letter, using capitals for emphasis in text like:</p>
+<pre><code>DO NOT do this</code></pre>
+<p>could result in a screen reader spelling out the words do and not by individual letters. It’s also felt to be a bit like shouting in text so consider other ways of emphasis.</p>
+</section>
+<section id="external-links" class="level2">
+<h2 class="anchored" data-anchor-id="external-links">External links</h2>
+<p>Write external links using “http://” instead of “www”. This ensures they are correctly recognised as hyperlinks.</p>
+</section>
+<section id="chunks-with-code-or-special-text" class="level2">
+<h2 class="anchored" data-anchor-id="chunks-with-code-or-special-text">Chunks with code or special text</h2>
+<p>You can ensure that any code (or Markdown) chunks you have in the guide have the code syntax highlighted by mentioning the language in question. As an example, if you want to have some R code, when you open the chunk with three backticks you can add the language name immediately after it (<code>```</code> becomes <code>```R</code>).</p>
+<p>Markdown source:</p>
+<pre><code>    ```R
+    x &lt;- c(1:21)
+    ```</code></pre>
+<p>HTML output:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">21</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="weekly-office-hours" class="level2">
-<h2 class="anchored" data-anchor-id="weekly-office-hours">Weekly office hours</h2>
-<p>In order to support people and manage the time we can dedicate to that support, we have office hours which are currently on a Monday from 3pm-4pm GMT through a Microsoft Teams link that is shared in the #announcements channel in the NHS-R Slack group. The meeting is moved to a Tuesday when England has a <a href="https://www.gov.uk/bank-holidays">public holiday</a> on the Monday and these changes are announced in the Slack group. The weekly office hours are for anyone to come along, without needing to schedule, with any issues with R or RStudio as part of the NHS-R Community. The meetings are run by Chris Beeley, Zoë Turner and Tom Jemmett on a rotating basis and is open to anyone who wishes to support this in the community. We keep a record of the upcoming meetings in a <a href="https://docs.google.com/spreadsheets/d/1PaRbNqwUhqQSmYj6tRoBgvaNefIGkTiDkyW75ZSbmeg/edit?usp=sharing">Google sheet</a>.</p>
-<p>You are also free to come for a chat!</p>
+<section id="style-guide-for-code" class="level1">
+<h1>Style Guide for code</h1>
+<section id="licenceslicenses" class="level2">
+<h2 class="anchored" data-anchor-id="licenceslicenses">Licences/licenses</h2>
+<p>Further information on the types of licences and how to get the text required for projects can be found on the <a href="https://nhs-r-community.github.io/statements-on-tools/open-code-in-the-nhs.html#licenceslicenses">Statement on Tools book</a></p>
 </section>
-<section id="twitter" class="level2">
-<h2 class="anchored" data-anchor-id="twitter">Twitter</h2>
-<p>The account for Twitter is managed by Chris Beeley, Zoë Turner and the administrative support for NHS-R Community. During events like the conference we extend this account access to interested NHS-R Community members who’d like to tweet from the account. We encourage retweeting and the use of hashtags during the conference which usually are often in the format #NHSRConf23.</p>
-<p>The Twitter account is used to promote NHS-R Community activities and any other #RStats related content that will be of interest to a wide audience.</p>
+<section id="language" class="level2">
+<h2 class="anchored" data-anchor-id="language">Language</h2>
+<p>Following the <a href="https://gds-way.cloudapps.digital/manuals/licensing.html#language">GDS Way</a> the NHS-R Community Way will:</p>
+<blockquote class="blockquote">
+<p>When using a proper name, use the appropriate spelling for that thing (e.g.&nbsp;the MIT License.)</p>
+</blockquote>
+<p>and:</p>
+<blockquote class="blockquote">
+<p>Each repository should include a licence file. This should be called LICENCE or LICENCE.md.</p>
+</blockquote>
 </section>
-<section id="fosstodon-server-on-mastodon" class="level2">
-<h2 class="anchored" data-anchor-id="fosstodon-server-on-mastodon">Fosstodon server on Mastodon</h2>
-<p>With the change in ownership to Twitter and a great deal of the NHS-R Community audience moving to Mastodon an NHS-R Community account is also managed through the open source content server, Fosstodon. This account, like for Twitter is managed by Chris Beeley, Zoë Turner and the administrative support for NHS-R Community.</p>
-</section>
-<section id="website" class="level2">
-<h2 class="anchored" data-anchor-id="website">Website</h2>
-<p>The NHS-R Community website is built using WordPress and managed through <a href="https://vergelabs.co.uk/">VergeLabs</a>. We use the website to promote the NHS-R Community but also as an event management system where people can join the community events like the monthly webinars, conferences and other events. Signing up is at no cost but email addresses are visible to the maintainers of the website, VergeLabs and also Chris Beeley, Zoë Turner and the administrative support for NHS-R Community. We do not use email addresses to bulk email and contact is only ever in relation to the event that has been signed up for.</p>
-</section>
-<section id="mailing-list" class="level2">
-<h2 class="anchored" data-anchor-id="mailing-list">Mailing list</h2>
-<p>Currently the NHS-R Community does not hold a mailing list as we will have to ensure strict compliance with GDPR. It is advised to sign up to any system related to NHS-R Community with a work address but where a private address is used we will try to ensure that this is not shared.</p>
-</section>
-</section>
-<section id="video-recording" class="level1">
-<h1>Video Recording</h1>
-<p>NHS-R Community have a Zoom account which is most often used for training and Microsoft Teams Events which is used for webinars. Some events can be set up using Microsoft Teams which is managed through NHS Midlands and Lancashire Commissioning Strategy Unit.</p>
-<p>In terms of recording, Zoom and Microsoft Teams Events only record the person speaking and their shared screen. Microsoft Teams which is used by many NHS and Local Authorities for meetings, however, shows the videos and names of attenders which may be an issue for attenders.</p>
-<section id="youtube" class="level2">
-<h2 class="anchored" data-anchor-id="youtube">YouTube</h2>
-<p>We always intend to share recordings through YouTube publicly, however, we do respect where trainers or presenters ask specifically not to share recordings. We are able to edit parts of videos using YouTube editing, cutting or blurring parts and will do this when notified.</p>
-<p>YouTube applies automatic subtitles after a period of time of uploading but at the moment we don’t amend those subtitles given the time it requires. However, this is something that we would like to do in the future and this may mean we get support from a community member.</p>
-</section>
-</section>
-<section id="blogs" class="level1">
-<h1>Blogs</h1>
-<p>We host blogs on the NHS-R Community website and we welcome contributions from anyone who wishes to write about R, health and social care, data science techniques and can be just text or can include code. We review blogs before posting and will give feedback if there are any reasons that we can’t publish. Blogs are rarely removed so some will be out of date due to the changes in the programs like R and best practice.</p>
-<p>Submissions for blogs can be in any format but need to be easily copied and pasted to <a href="mailto:nhs.rcommunity@nhs.net">nhs.rcommunity@nhs.net</a>. For this reason pdf formats are not necessarily the easiest to share content.</p>
-<p>Pictures and charts can be included in the blogs and these are expected to have Alternative Text or Captions for greater accessibility. This includes any pictures used for visual impact and not necessarily to add to the content directly.</p>
+<section id="licences-to-use" class="level2">
+<h2 class="anchored" data-anchor-id="licences-to-use">Licences to use</h2>
+<p>NHS-R Community repositories are licenced under <a href="https://pitt.libguides.com/openlicensing/MIT#:~:text=Like%20the%20Apache%202.0%2C%20and,sell%20copies%20of%20the%20software.">MIT</a> for code based projects like Shiny apps and packages:</p>
+<blockquote class="blockquote">
+<p>the MIT License is a permissive software license that places few restrictions of reuse. Users of software using an MIT License are permitted to use, copy, modify, merge publish, distribute, sublicense and sell copies of the software.</p>
+</blockquote>
+<p>and <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> for text based projects like training and books (like this):</p>
+<blockquote class="blockquote">
+<p>allows the creator to retain copyright whilst allowing others to copy and distribute and make use of their work non-commercially. The Creative Commons license also ensures creators get the recognition and credit for the work they produce and share.</p>
+</blockquote>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -496,13 +554,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./style-guides.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Style Guides</span>
+      <a href="./code-of-conduct.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Code of Conduct</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./community-handbook.html" class="pagination-link">
+        <span class="nav-page-text">Community Handbook</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
